@@ -7,9 +7,17 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.create_tutorial');
+        $id = $request->query('id');
+
+        $tutorial = '';
+        if ($id) {
+            $tutorial = Tutorial::find($id);
+        }
+
+        return view('admin.create_tutorial')
+            ->with('tutorial', $tutorial);
     }
 
     public function tutorials()
@@ -29,6 +37,12 @@ class AdminController extends Controller
 
         $tutorial->save();
 
+        return redirect(route('admin'));
+    }
+
+    public function deleteTutorial(Request $request)
+    {
+        Tutorial::destroy($request->id);
         return redirect(route('admin'));
     }
 }

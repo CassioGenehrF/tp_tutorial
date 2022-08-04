@@ -35,7 +35,9 @@ Route::middleware(['auth'])->group(function () {
     Route::group(['prefix' => 'admin'], function () {
         Route::get('', [AdminController::class, 'index'])->name('admin');
         Route::get('tutorials', [AdminController::class, 'tutorials'])->name('admin.tutorials');
+        Route::get('tutorial/{id}', [AdminController::class, 'tutorial'])->name('admin.edit_tutorial');
+        Route::delete('tutorial', [AdminController::class, 'deleteTutorial'])->name('admin.delete_tutorial');
+        Route::post('tutorial', [AdminController::class, 'createTutorial'])->name('admin.add_tutorial');
     });
-    Route::post('tutorial', [AdminController::class, 'createTutorial'])->name('admin.add_tutorial');
 });
 

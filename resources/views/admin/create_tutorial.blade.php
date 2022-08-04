@@ -8,13 +8,16 @@
     <div class="content">
         <div class="container">
             <form action="{{ route('admin.add_tutorial') }}" method="post">
+                <input type="hidden" name="id" value="{{ isset($tutorial) ? $tutorial->id : 0 }}">
                 <div class="form-group col-md-4">
                     <label for="youtube_id">Youtube ID:</label>
-                    <input type="text" class="form-control" id="youtube_id" name="youtube_id" required>
+                    <input type="text" class="form-control" id="youtube_id" name="youtube_id" required
+                        value="{{ isset($tutorial) ? $tutorial->youtube_id : '' }}">
                 </div>
                 <div class="form-group col-md-4 mt-2">
                     <label for="title">Título:</label>
-                    <input type="text" class="form-control" id="title" name="title" required>
+                    <input type="text" class="form-control" id="title" name="title" required
+                        value="{{ isset($tutorial) ? $tutorial->title : '' }}">
                 </div>
                 <button class="btn btn-primary mt-2">Criar</button>
             </form>

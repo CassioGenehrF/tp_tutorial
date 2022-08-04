@@ -21,7 +21,17 @@
                             <tr>
                                 <td>{{ $tutorial->youtube_id }}</td>
                                 <td>{{ $tutorial->title }}</td>
-                                <td></td>
+                                <td>
+                                    <a href="{{ route('admin', ['id' => $tutorial->id]) }}"
+                                        class="btn btn-light">
+                                        Editar</a>
+                                    <form action="{{ route('admin.delete_tutorial', ['id' => $tutorial->id]) }}"
+                                        method="post">
+                                        @method('delete')
+                                        @csrf
+                                        <button type="submit" class="btn btn-danger">Excluir</button>
+                                    </form>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
