@@ -131,7 +131,9 @@ a {
 }
 
 .nav_link:hover,
-.theme:hover {
+.nav_logo_name:hover,
+.theme:hover,
+.btn:hover {
     color: var(--white-color)
 }
 
