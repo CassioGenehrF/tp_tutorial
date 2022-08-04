@@ -59,6 +59,6 @@ class AdminController extends Controller
     public function deleteTutorial(Request $request)
     {
         Tutorial::destroy($request->id);
-        return redirect(route('admin'));
+        return redirect(route('admin.tutorials'));
     }
 }
