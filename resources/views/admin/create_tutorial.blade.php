@@ -8,6 +8,7 @@
     <div class="content">
         <div class="container">
             <form action="{{ route('admin.add_tutorial') }}" method="post">
+                {{dd($tutorial)}}
                 <input type="hidden" name="id" value="{{ isset($tutorial) ? $tutorial->id : 0 }}">
                 <div class="form-group col-md-4">
                     <label for="youtube_id">Youtube ID:</label>
