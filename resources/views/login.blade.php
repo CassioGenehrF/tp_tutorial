@@ -29,18 +29,18 @@
                     @endforeach
                 </ul>
             @endif
-            <form class="flex direction-column" action="{{ route('login.auth') }}" method="POST">
+            <form class="d-flex flex-column align-items-center" action="{{ route('login.auth') }}" method="POST">
                 @csrf
-                <div class="form-group">
+                <div class="form-group col-md-3">
                     <label for="user_login">Usuário:</label>
                     <input class="form-control" type="text" id="user_login" name="user_login" placeholder="Digite seu nome de usuário"
                         required>
                 </div>
-                <div class="form-group">
+                <div class="form-group col-md-3 mt-2">
                     <label for="password">Senha:</label>
                     <input class="form-control" type="password" id="password" name="password" placeholder="Digite sua senha" required>
                 </div>
-                <button type="submit" class="login-button">Entrar</button>
+                <button type="submit" class="btn btn-primary mt-2">Entrar</button>
             </form>
         </div>
     </div>
