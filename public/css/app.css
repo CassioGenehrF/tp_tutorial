@@ -70,6 +70,15 @@ a {
     cursor: pointer
 }
 
+.header_img {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden
+}
+
 .font-color {
     color: var(--text-color) !important;
 }
@@ -146,11 +155,12 @@ a {
 }
 
 .show {
-    left: 0
+    left: 0;
+    width: calc(var(--nav-width) + 156px);
 }
 
 .body-pd {
-    padding-left: calc(var(--nav-width) + 1rem)
+    padding-left: calc(var(--nav-width) + 9.7rem);
 }
 
 .active {
@@ -206,12 +216,4 @@ a {
     .content {
         height: calc(100vh - (var(--header-height) + 1rem));
     }
-}
-
-.show {
-    width: calc(var(--nav-width) + 156px)
-}
-
-.body-pd {
-    padding-left: calc(var(--nav-width) + 9.7rem)
 }

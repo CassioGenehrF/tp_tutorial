@@ -25,6 +25,11 @@
         <div class="header_toggle">
             <i class='bx bx-menu' id="header-toggle"></i>
         </div>
+        <div class="header_img">
+            <a class="theme" id="dark">
+                <i class='bx bx-moon nav_icon'></i>
+            </a>
+        </div>
     </header>
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
@@ -46,9 +51,6 @@
                     </a>
                 </div>
             </div>
-            <a class="theme" id="dark">
-                <i class='bx bx-moon nav_icon'></i>
-            </a>
         </nav>
     </div>
     @yield('content')
