@@ -42,12 +42,12 @@
                     </a>
                 </div>
             </div>
-            <form action="{{ route('logout') }}" method="post">
-                @csrf
-                <button type="submit">Sair</button>
-            </form>
             <a class="theme" id="dark">
                 <i class='bx bx-moon nav_icon'></i>
+                <form action="{{ route('logout') }}" method="post">
+                    @csrf
+                    <button type="submit" class="btn">Sair</button>
+                </form>
             </a>
         </nav>
     </div>

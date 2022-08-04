@@ -118,6 +118,10 @@ a {
     font-weight: 700
 }
 
+.btn {
+    color: var(--second-color-light);
+}
+
 .nav_link,
 .theme {
     position: relative;
