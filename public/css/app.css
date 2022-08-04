@@ -71,7 +71,7 @@ a {
 }
 
 .font-color {
-    color: var(--text-color);
+    color: var(--text-color) !important;
 }
 
 .l-navbar {
