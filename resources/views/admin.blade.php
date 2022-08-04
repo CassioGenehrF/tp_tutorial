@@ -7,13 +7,17 @@
 @section('content')
     <div class="content">
         <div class="container">
-            <h1>{{ $tutorial->title }}</h1>
-            <div class="mt-4 align-center d-flex flex-column align-items-center video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $tutorial->youtube_id }}"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
+            <form action="{{ route('admin.add_tutorial') }}" method="post">
+                <div class="form-group col-md-4">
+                    <label for="youtube_id">Youtube ID:</label>
+                    <input type="text" class="form-control" id="youtube_id" name="youtube_id" required>
+                </div>
+                <div class="form-group col-md-4 mt-2">
+                    <label for="title">Título:</label>
+                    <input type="text" class="form-control" id="title" name="title" required>
+                </div>
+                <button class="btn btn-primary mt-2">Criar</button>
+            </form>
         </div>
     </div>
     <script type="text/javascript">

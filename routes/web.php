@@ -33,5 +33,6 @@ Route::middleware(['auth'])->group(function () {
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
     Route::get('admin', [AdminController::class, 'index'])->name('admin');
+    Route::post('tutorial', [AdminController::class, 'createTutorial'])->name('admin.add_tutorial');
 });
 
