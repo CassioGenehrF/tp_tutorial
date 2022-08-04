@@ -122,7 +122,7 @@ a {
     font-weight: 700
 }
 
-.btn {
+.theme .btn {
     color: var(--second-color-light);
 }
 
@@ -137,7 +137,7 @@ a {
 .nav_link:hover,
 .nav_logo-name:hover,
 .theme:hover,
-.btn:hover {
+.theme .btn:hover {
     color: var(--white-color)
 }
 
