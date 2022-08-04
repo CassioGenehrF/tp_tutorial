@@ -9,7 +9,13 @@ class AdminController extends Controller
 {
     public function index()
     {
-        return view('admin');
+        return view('admin.create_tutorial');
+    }
+
+    public function tutorials()
+    {
+        return view('admin.tutorials')
+            ->with('tutorials', Tutorial::all());
     }
 
     public function createTutorial(Request $request)

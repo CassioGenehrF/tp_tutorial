@@ -32,7 +32,10 @@ Route::post('theme', [ThemeController::class, 'switch'])->name('theme');
 Route::middleware(['auth'])->group(function () {
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
-    Route::get('admin', [AdminController::class, 'index'])->name('admin');
+    Route::group(['prefix' => 'admin'], function () {
+        Route::get('', [AdminController::class, 'index'])->name('admin');
+        Route::get('tutorials', [AdminController::class, 'tutorials'])->name('admin.tutorials');
+    });
     Route::post('tutorial', [AdminController::class, 'createTutorial'])->name('admin.add_tutorial');
 });
 
