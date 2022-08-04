@@ -29,6 +29,12 @@
             <a class="theme" id="dark">
                 <i class='bx bx-moon nav_icon'></i>
             </a>
+            <form action="{{ route('logout') }}" method="post">
+                @csrf
+                <button type="submit" class="btn">
+                    <i class="bx bx-log-out nav_icon"></i>
+                </button>
+            </form>
         </div>
     </header>
     <div class="l-navbar" id="nav-bar">
@@ -51,10 +57,6 @@
                     </a>
                 </div>
             </div>
-            <form action="{{ route('logout') }}" method="post">
-                @csrf
-                <button type="submit" class="btn">Sair</button>
-            </form>
         </nav>
     </div>
     @yield('content')
