@@ -28,14 +28,30 @@ class AdminController extends Controller
 
     public function createTutorial(Request $request)
     {
-        $data = $request->only(['youtube_id', 'title']);
+        $data = $request->only(['id', 'youtube_id', 'title']);
 
-        $tutorial = new Tutorial([
-            'youtube_id' => $data['youtube_id'],
-            'title' => $data['title']
-        ]);
+        Tutorial::updateOrCreate(
+            ['id' => $data['id']],
+            [
+                'youtube_id' => $data['youtube_id'],
+                'title' => $data['title']
+            ]
+        );
 
-        $tutorial->save();
+        // if ($data['id']) {
+        //     $tutorial = Tutorial::find($data['id']);
+        // }
+
+        // if (!$data['id']) {
+        //     $tutorial = new Tutorial();
+        // }
+
+        // $tutorial->fill([
+        //     'youtube_id' => $data['youtube_id'],
+        //     'title' => $data['title']
+        // ]);
+
+        // $tutorial->save();
 
         return redirect(route('admin'));
     }
