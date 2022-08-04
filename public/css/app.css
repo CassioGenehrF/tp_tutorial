@@ -70,6 +70,10 @@ a {
     cursor: pointer
 }
 
+.font-color {
+    color: var(--text-color);
+}
+
 .l-navbar {
     position: fixed;
     top: 0;
