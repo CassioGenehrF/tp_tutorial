@@ -53,7 +53,7 @@ class AdminController extends Controller
 
         // $tutorial->save();
 
-        return redirect(route('admin'));
+        return redirect(route('admin.tutorials'));
     }
 
     public function deleteTutorial(Request $request)
