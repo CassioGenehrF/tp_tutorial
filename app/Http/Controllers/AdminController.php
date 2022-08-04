@@ -10,11 +10,7 @@ class AdminController extends Controller
     public function index(Request $request)
     {
         $id = $request->query('id');
-
-        $tutorial = '';
-        if ($id) {
-            $tutorial = Tutorial::find($id);
-        }
+        $tutorial = $id ? Tutorial::find($id) : '';
 
         return view('admin.create_tutorial')
             ->with('tutorial', $tutorial);
@@ -28,30 +24,15 @@ class AdminController extends Controller
 
     public function createTutorial(Request $request)
     {
-        $data = $request->only(['id', 'youtube_id', 'title']);
-
         Tutorial::updateOrCreate(
-            ['id' => $data['id']],
             [
-                'youtube_id' => $data['youtube_id'],
-                'title' => $data['title']
+                'id' => $request->id
+            ],
+            [
+                'youtube_id' => $request->youtube_id,
+                'title' => $request->title
             ]
         );
-
-        // if ($data['id']) {
-        //     $tutorial = Tutorial::find($data['id']);
-        // }
-
-        // if (!$data['id']) {
-        //     $tutorial = new Tutorial();
-        // }
-
-        // $tutorial->fill([
-        //     'youtube_id' => $data['youtube_id'],
-        //     'title' => $data['title']
-        // ]);
-
-        // $tutorial->save();
 
         return redirect(route('admin.tutorials'));
     }
