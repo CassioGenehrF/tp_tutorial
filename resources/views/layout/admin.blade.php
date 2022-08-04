@@ -40,7 +40,7 @@
                         <i class='bx bx-grid-alt nav_icon'></i>
                         <span class="nav_name">Adicionar Tutorial</span>
                     </a>
-                    <a href="{{ route('admin') }}" class="nav_link" id="tutorials">
+                    <a href="{{ route('admin.tutorials') }}" class="nav_link" id="tutorials">
                         <i class='bx bx-grid-alt nav_icon'></i>
                         <span class="nav_name">Tutoriais</span>
                     </a>
