@@ -31,7 +31,7 @@
             </a>
             <form action="{{ route('logout') }}" method="post">
                 @csrf
-                <button type="submit" class="btn">
+                <button type="submit" class="btn theme">
                     <i class="bx bx-log-out nav_icon"></i>
                 </button>
             </form>
