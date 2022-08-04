@@ -135,8 +135,11 @@ a {
     color: var(--second-color-light);
 }
 
-.nav_link,
 .theme {
+    color: var(--text-color);
+}
+
+.nav_link {
     position: relative;
     color: var(--second-color-light);
     margin-bottom: 1.5rem;
@@ -160,7 +163,7 @@ a {
 }
 
 .body-pd {
-    padding-left: calc(var(--nav-width) + 9.7rem);
+    padding-left: calc(var(--nav-width) + 9.7rem) !important;
 }
 
 .active {
