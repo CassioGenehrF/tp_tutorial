@@ -17,7 +17,7 @@
     <div class="flex">
         <div class="form-box text-center">
             <div class="form-logo text-center">
-                <img style="width: 500px;" src="{{ asset('img/logopaulista.png') }}" alt="Temporada Paulista">
+                <img style="width: 70%; max-width: 500px;" src="{{ asset('img/logopaulista.png') }}" alt="Temporada Paulista">
             </div>
             <div class="title">
                 <h2>Login</h2>
