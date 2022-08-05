@@ -22,7 +22,7 @@
 
 <body id="body-pd" class="body-pd">
     <header class="header body-pd" id="header">
-        <div class="header_toggle bx-x">
+        <div class="header_toggle">
             <i class='bx bx-menu bx-x' id="header-toggle"></i>
         </div>
         <div class="header_img">
