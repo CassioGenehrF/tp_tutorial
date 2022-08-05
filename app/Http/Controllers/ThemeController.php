@@ -10,12 +10,12 @@ class ThemeController extends Controller
     {
         $theme = Session::get('theme');
 
-        if ($theme == 'dark') {
-            Session::put('theme', 'normal');
-            return 'normal';
+        if ($theme == 'normal') {
+            Session::put('theme', 'dark');
+            return 'dark';
         }
 
-        Session::put('theme', 'dark');
-        return 'dark';
+        Session::put('theme', 'normal');
+        return 'normal';
     }
 }

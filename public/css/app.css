@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 
-:root,
 :root.light {
     --header-height: 3rem;
     --nav-width: 68px;
@@ -15,6 +14,7 @@
     --text-color: #262626;
 }
 
+:root,
 :root.dark {
     --header-height: 3rem;
     --nav-width: 68px;
@@ -193,8 +193,8 @@ a {
 .video-container object,
 .video-container embed {
     position: absolute;
-    width: 60%;
-    height: 80%;
+    width: 90%;
+    height: 100%;
 }
 
 @media screen and (min-width: 768px) {
