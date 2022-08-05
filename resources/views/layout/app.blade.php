@@ -20,10 +20,10 @@
     @yield('scripts')
 </head>
 
-<body id="body-pd">
-    <header class="header" id="header">
-        <div class="header_toggle">
-            <i class='bx bx-menu' id="header-toggle"></i>
+<body id="body-pd" class="body-pd">
+    <header class="header body-pd" id="header">
+        <div class="header_toggle bx-x">
+            <i class='bx bx-menu bx-x' id="header-toggle"></i>
         </div>
         <div class="header_img">
             <a class="theme" id="dark">
@@ -31,7 +31,7 @@
             </a>
         </div>
     </header>
-    <div class="l-navbar" id="nav-bar">
+    <div class="l-navbar show" id="nav-bar">
         <nav class="nav">
             <div>
                 <a href="{{ route('index') }}" class="nav_logo">
